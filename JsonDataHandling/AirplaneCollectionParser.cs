@@ -27,6 +27,9 @@ namespace JsonDataHandling {
                     airplane.Longitude = Convert.ToDouble(currentState[5]);
                     airplane.Latitude = Convert.ToDouble(currentState[6]);
 
+                    if (airplane.Longitude == 0 && airplane.Latitude == 0)
+                        throw new Exception("Invalid.");
+
                     airplane.OnGround = currentState[8];
 
                     airplanes.Add(airplane);

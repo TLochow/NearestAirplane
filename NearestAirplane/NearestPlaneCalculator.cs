@@ -27,11 +27,20 @@ namespace NearestAirplane {
         }
 
         public Airplane GetNearestAirplane(double longitude, double latitude, bool onGround) {
-            IEnumerable<Airplane> planes = _airplanes.Airplanes.Where(a => a.OnGround == onGround);
-            foreach (Airplane plane in _airplanes.Airplanes)
+            List<Airplane> planes = _airplanes.Airplanes.Where(a => a.OnGround == onGround).ToList();
+            foreach (Airplane plane in planes)
                 plane.Distance = Distance(longitude, latitude, plane.Longitude, plane.Latitude);
-            _airplanes.Airplanes.Sort();
-            return _airplanes.Airplanes.First();
+
+            Airplane nearest = null;
+            double bestScore = double.MaxValue;
+            foreach (Airplane plane in planes) {
+                if (plane.Distance < bestScore) {
+                    nearest = plane;
+                    bestScore = plane.Distance;
+                }
+            }
+
+            return nearest;
         }
 
         public static double Distance(double x1, double y1, double x2, double y2) {

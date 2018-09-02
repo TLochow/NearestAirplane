@@ -1,5 +1,7 @@
 ﻿using Airplanes;
 using System;
+using System.Diagnostics;
+using System.Globalization;
 
 namespace NearestAirplane {
     class Program {
@@ -14,6 +16,7 @@ namespace NearestAirplane {
 
                 Airplane nearestPlane = calculator.GetNearestAirplane(longitude, latitude, onGround);
                 Console.WriteLine(nearestPlane);
+                Process.Start(String.Format("https://www.flightradar24.com/simple_index?callsign={0}", nearestPlane.Name));
             }
         }
 
@@ -23,7 +26,7 @@ namespace NearestAirplane {
             while (!validInput) {
                 Console.Write(text);
                 string input = Console.ReadLine();
-                if (double.TryParse(input, out result))
+                if (double.TryParse(input, NumberStyles.Any, CultureInfo.InvariantCulture, out result))
                     validInput = true;
                 else
                     Console.WriteLine("Invalid input.");

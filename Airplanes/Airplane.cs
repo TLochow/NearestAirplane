@@ -14,7 +14,7 @@ namespace Airplanes {
 
         public int CompareTo(object obj) {
             Airplane other = (Airplane)obj;
-            return Distance.CompareTo(other.Distance);
+            return other.Distance.CompareTo(Distance);
         }
 
         public override string ToString() {
