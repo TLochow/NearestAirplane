@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FBC1D9C1-3C5C-47FC-8B5A-543B406184CD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>NearestAirplane</RootNamespace>
-    <AssemblyName>NearestAirplane</AssemblyName>
+    <ProjectGuid>{7F239CF6-23B1-4BB7-BEA1-410EC36F4C0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JsonDataHandling</RootNamespace>
+    <AssemblyName>JsonDataHandling</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,25 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NearestPlaneCalculator.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="AirplaneCollectionParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Airplanes\Airplanes.csproj">
       <Project>{6fdbf974-36d3-482d-8583-347f9aaf381a}</Project>
       <Name>Airplanes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JsonDataHandling\JsonDataHandling.csproj">
-      <Project>{7f239cf6-23b1-4bb7-bea1-410ec36f4c0f}</Project>
-      <Name>JsonDataHandling</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebApiClient\WebApiClient.csproj">
-      <Project>{2194230e-27e2-4188-bbb1-28cfb3fbaece}</Project>
-      <Name>WebApiClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

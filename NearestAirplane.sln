@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NearestAirplane", "NearestA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiClient", "WebApiClient\WebApiClient.csproj", "{2194230E-27E2-4188-BBB1-28CFB3FBAECE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airplanes", "Airplanes\Airplanes.csproj", "{6FDBF974-36D3-482D-8583-347F9AAF381A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonDataHandling", "JsonDataHandling\JsonDataHandling.csproj", "{7F239CF6-23B1-4BB7-BEA1-410EC36F4C0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{2194230E-27E2-4188-BBB1-28CFB3FBAECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2194230E-27E2-4188-BBB1-28CFB3FBAECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2194230E-27E2-4188-BBB1-28CFB3FBAECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FDBF974-36D3-482D-8583-347F9AAF381A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDBF974-36D3-482D-8583-347F9AAF381A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDBF974-36D3-482D-8583-347F9AAF381A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDBF974-36D3-482D-8583-347F9AAF381A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F239CF6-23B1-4BB7-BEA1-410EC36F4C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F239CF6-23B1-4BB7-BEA1-410EC36F4C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F239CF6-23B1-4BB7-BEA1-410EC36F4C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F239CF6-23B1-4BB7-BEA1-410EC36F4C0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
